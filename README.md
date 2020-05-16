@@ -1,4 +1,4 @@
-This project is the fron-end structure of GoBarber app, it will use the nodeDevelopment repository
+This project is the front-end structure of GoBarber app, it will use the nodeDevelopment repository
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
