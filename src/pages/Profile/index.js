@@ -1,17 +1,21 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { updateProfileRequest } from '~/store/modules/user/action';
 import { Container } from './styles';
 
 function Profile() {
+  const dispatch = useDispatch();
   const profile = useSelector((state) => state.user.profile);
 
-  function handleSubmit(data) {}
+  function handleSubmit(data) {
+    dispatch(updateProfileRequest(data));
+  }
 
   return (
     <Container>
-      <Form initialData={profile} onClick={handleSubmit}>
+      <Form initialData={profile} onSubmit={handleSubmit}>
         <Input name="name" placeholder="Full name" />
         <Input name="email" type="email" placeholder="Your email adress" />
 
